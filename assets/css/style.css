@@ -1,0 +1,31 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Saira Extra Condensed', sans-serif;
+	background-image: url(../images/starfield.png);
+	color: hsl(0, 0%, 80%);
+	letter-spacing: 0.02em;
+
+
+}
+
+.container {
+	width: 100%;
+	margin: 0, auto;
+}
+h1 {
+	font-family: 'Russo One', sans-serif;
+	text-align: center;
+	font-size: 40px;
+	letter-spacing: 0.05em;
+}
+button {
+	position: relative;
+	left:45%;
+}
+
+.game {
+	margin-top: 2%, auto;
+}
