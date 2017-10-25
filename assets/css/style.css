@@ -27,5 +27,25 @@ button {
 }
 
 .game {
-	margin-top: 2%, auto;
+	position: relative;
+	top: 10px;
+	left: 10%;
+}
+
+.push {
+  height: 100px;
+  clear: both;
+}
+
+footer {
+  position: fixed;
+  height: 100px;
+  bottom: 0px;
+  width: 100%;
+  padding: 30px 0;
+  font-size: 12px;
+  color: #fff;
+  color: #ccc;
+  text-align: center;
+  background: #666;
 }
