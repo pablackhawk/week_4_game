@@ -21,6 +21,12 @@ h1 {
 	font-size: 40px;
 	letter-spacing: 0.05em;
 }
+
+.body_text {
+	position: relative;
+	left: 5%;
+}
+
 button {
 	position: relative;
 	left:45%;
