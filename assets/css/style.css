@@ -29,13 +29,13 @@ h1 {
 
 button {
 	position: relative;
-	left:45%;
+	left:46%;
 }
 
 .game {
 	position: relative;
 	top: 10px;
-	left: 10%;
+	left: 13%;
 }
 
 .push {
@@ -48,7 +48,7 @@ footer {
   height: 100px;
   bottom: 0px;
   width: 100%;
-  padding: 30px 0;
+  padding: 45px 0;
   font-size: 12px;
   color: #fff;
   color: #ccc;
