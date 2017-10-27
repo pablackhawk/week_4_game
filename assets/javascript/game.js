@@ -65,8 +65,8 @@ var targetNumber,
 		generateIncrementor();
 
 		
-		$(".target").text(targetNumber);
-		$(".display").text(playerNumber);
+		$(".target").html("<h3>Target Number: " + targetNumber + "</h3>");
+		$(".display").html("<h3>Your Number: " + playerNumber + "</h3>");
 
 		c1Value = incrementor[0],
 		c2Value = incrementor[1],
@@ -79,14 +79,14 @@ var targetNumber,
 		$("#c4").attr("value", incrementor[3]);
 		
 
-		$("#wins").text("Wins = " + wins);
-		$("#losses").text("Losses = " + losses);
+		$("#wins").html("<h3>Wins = " + wins + "</h3>");
+		$("#losses").html("<h3>Losses = " + losses + "</h3>");
 
 
 		$("#c1").on('click', function(){
 			
 			playerNumber = playerNumber + c1Value;
-			$(".display").text(playerNumber);
+			$(".display").html("<h3>Your number: " + playerNumber + "</h3>");
 			
 
 			if(playerNumber === targetNumber){
@@ -103,7 +103,7 @@ var targetNumber,
 		$("#c2").on('click', function(){
 			
 			playerNumber = playerNumber + c2Value;
-			$(".display").text(playerNumber);
+			$(".display").html("<h3>Your number: " + playerNumber + "</h3>");
 			// console.log(playerNumber);
 
 			if(playerNumber === targetNumber){
@@ -118,7 +118,7 @@ var targetNumber,
 		$("#c3").on('click', function(){
 			// console.log(c1Value);
 			playerNumber = playerNumber + c3Value;
-			$(".display").text(playerNumber);
+			$(".display").html("<h3>Your number: " + playerNumber + "</h3>");
 			// console.log(playerNumber);
 
 			if(playerNumber === targetNumber){
@@ -133,7 +133,7 @@ var targetNumber,
 		$("#c4").on('click', function(){
 			
 			playerNumber = playerNumber + c4Value;
-			$(".display").text(playerNumber);
+			$(".display").html("<h3>Your number: " + playerNumber + "</h3>");
 
 			if(playerNumber === targetNumber){
 				win();
