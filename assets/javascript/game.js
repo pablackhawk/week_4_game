@@ -2,7 +2,8 @@ $(document).ready(function(){
 
 var targetNumber,
 	playerNumber,
-	incrementor = [10, 5, 3, 1],
+	incrementor = [],
+	randomNumber,
 	c1Value,
 	c2Value,
 	c3Value,
@@ -10,39 +11,35 @@ var targetNumber,
 	wins = 0,
 	losses = 0;
 
-
-	function shuffleArray(array) {
-    	for (var i = array.length - 1; i > 0; i--) {
-        	var j = Math.floor(Math.random() * (i + 1));
-        	var temp = array[i];
-        	array[i] = array[j];
-        	array[j] = temp;
-    	}
-    	return array;
+	function generateIncrementor() {
+		for (var i = 0; i < 5; i++) {
+			randomNumber = (Math.floor(Math.random()*12)+1);
+			incrementor.push(randomNumber);
+		}
 	}
-	
+
 
 
 	function gameReset() {
 		alert("Play Again?") 
-		targetNumber = (Math.floor(Math.random() * 100) + 1);
+		targetNumber = (Math.floor(Math.random() * 121) + 19);
 		console.log(targetNumber);
 		playerNumber = 0;
+		incrementor = [];
 
-		var newShuffleArray = shuffleArray(incrementor);
+		generateIncrementor();
 
-		 c1Value = newShuffleArray[0],
-		 c2Value = newShuffleArray[1],
-		 c3Value = newShuffleArray[2],
-		 c4Value = newShuffleArray[3];
-		
-		$(".target").text(targetNumber);
-		$(".display").text(playerNumber);
-		$("#c1").attr("value", newShuffleArray[0]);
-		$("#c2").attr("value", newShuffleArray[1]);
-		$("#c3").attr("value", newShuffleArray[2]);
-		$("#c4").attr("value", newShuffleArray[3]);
+		c1Value = incrementor[0],
+		c2Value = incrementor[1],
+		c3Value = incrementor[2],
+		c4Value = incrementor[3],
 
+		//This displays the value in console log
+		$("#c1").attr("value", incrementor[0]);
+		$("#c2").attr("value", incrementor[1]);
+		$("#c3").attr("value", incrementor[2]);
+		$("#c4").attr("value", incrementor[3]);
+	
 	}
 
 	function win() {
@@ -58,37 +55,39 @@ var targetNumber,
 		$("#losses").text("Losses = " + losses);
 		gameReset();
 	}
-
+	//game start
 	$("#start").on("click", function gameStart(){
+
 		targetNumber = (Math.floor(Math.random() * 100) + 1);
 
 		console.log(targetNumber);
 		playerNumber = 0;	
-		
-		var newShuffleArray = shuffleArray(incrementor);
+		generateIncrementor();
+
 		
 		$(".target").text(targetNumber);
 		$(".display").text(playerNumber);
 
-		    c1Value = newShuffleArray[0],
-			c2Value = newShuffleArray[1],
-			c3Value = newShuffleArray[2],
-			c4Value = newShuffleArray[3];
+		c1Value = incrementor[0],
+		c2Value = incrementor[1],
+		c3Value = incrementor[2],
+		c4Value = incrementor[3],
 
-		$("#c1").attr("value", newShuffleArray[0]);
-		$("#c2").attr("value", newShuffleArray[1]);
-		$("#c3").attr("value", newShuffleArray[2]);
-		$("#c4").attr("value", newShuffleArray[3]);
+		$("#c1").attr("value", incrementor[0]);
+		$("#c2").attr("value", incrementor[1]);
+		$("#c3").attr("value", incrementor[2]);
+		$("#c4").attr("value", incrementor[3]);
+		
 
 		$("#wins").text("Wins = " + wins);
 		$("#losses").text("Losses = " + losses);
 
 
 		$("#c1").on('click', function(){
-			console.log(c1Value);
+			
 			playerNumber = playerNumber + c1Value;
 			$(".display").text(playerNumber);
-			console.log(playerNumber);
+			
 
 			if(playerNumber === targetNumber){
 				win();
@@ -102,10 +101,10 @@ var targetNumber,
 		});
 
 		$("#c2").on('click', function(){
-			console.log(c1Value);
+			
 			playerNumber = playerNumber + c2Value;
 			$(".display").text(playerNumber);
-			console.log(playerNumber);
+			// console.log(playerNumber);
 
 			if(playerNumber === targetNumber){
 				win();
@@ -117,10 +116,10 @@ var targetNumber,
 		});
 
 		$("#c3").on('click', function(){
-			console.log(c1Value);
+			// console.log(c1Value);
 			playerNumber = playerNumber + c3Value;
 			$(".display").text(playerNumber);
-			console.log(playerNumber);
+			// console.log(playerNumber);
 
 			if(playerNumber === targetNumber){
 				win();
@@ -132,10 +131,9 @@ var targetNumber,
 		});
 
 		$("#c4").on('click', function(){
-			console.log(c1Value);
+			
 			playerNumber = playerNumber + c4Value;
 			$(".display").text(playerNumber);
-			console.log(playerNumber);
 
 			if(playerNumber === targetNumber){
 				win();
