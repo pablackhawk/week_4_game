@@ -85,7 +85,7 @@ var targetNumber,
 
 		$("#c1").on('click', function(){
 			
-			playerNumber = playerNumber + c1Value;
+			playerNumber += c1Value;
 			$(".display").html("<h3>Your number: " + playerNumber + "</h3>");
 			
 
@@ -102,7 +102,7 @@ var targetNumber,
 
 		$("#c2").on('click', function(){
 			
-			playerNumber = playerNumber + c2Value;
+			playerNumber += c2Value;
 			$(".display").html("<h3>Your number: " + playerNumber + "</h3>");
 			// console.log(playerNumber);
 
@@ -117,7 +117,7 @@ var targetNumber,
 
 		$("#c3").on('click', function(){
 			// console.log(c1Value);
-			playerNumber = playerNumber + c3Value;
+			playerNumber += c3Value;
 			$(".display").html("<h3>Your number: " + playerNumber + "</h3>");
 			// console.log(playerNumber);
 
@@ -132,7 +132,7 @@ var targetNumber,
 
 		$("#c4").on('click', function(){
 			
-			playerNumber = playerNumber + c4Value;
+			playerNumber += c4Value;
 			$(".display").html("<h3>Your number: " + playerNumber + "</h3>");
 
 			if(playerNumber === targetNumber){
