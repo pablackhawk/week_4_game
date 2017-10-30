@@ -24,9 +24,10 @@ var targetNumber,
 		alert("Play Again?") 
 		targetNumber = (Math.floor(Math.random() * 121) + 19);
 		console.log(targetNumber);
-		playerNumber = 0;
-		incrementor = [];
 
+		incrementor = [];
+		playerNumber = 0;
+		
 		generateIncrementor();
 
 		c1Value = incrementor[0],
@@ -39,6 +40,9 @@ var targetNumber,
 		$("#c2").attr("value", incrementor[1]);
 		$("#c3").attr("value", incrementor[2]);
 		$("#c4").attr("value", incrementor[3]);
+		$(".target").html("<h3>Target Number: " + targetNumber + "</h3>");
+		$(".display").html("<h3>Your Number: " + playerNumber + "</h3>");
+		
 	
 	}
 
