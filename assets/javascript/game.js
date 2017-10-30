@@ -27,7 +27,7 @@ var targetNumber,
 
 		incrementor = [];
 		playerNumber = 0;
-		
+
 		generateIncrementor();
 
 		c1Value = incrementor[0],
@@ -49,14 +49,14 @@ var targetNumber,
 	function win() {
 		alert("You win!!!!");
 		wins++;
-		$("#wins").text("Wins = " + wins);
+		$("#wins").html("<h3>Wins = " + wins + "</h3>");
 		gameReset();
 	}
 
 	function loss() {
 		alert("You lose! :(");
 		losses++;
-		$("#losses").text("Losses = " + losses);
+		$("#losses").html("<h3>Losses = " + losses + "</h3>");
 		gameReset();
 	}
 	//game start
